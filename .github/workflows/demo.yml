@@ -1,0 +1,24 @@
+name: demo_hello
+on:
+  push:
+    workflow_dispatch:
+jobs:
+  demo_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello World"
+
+      - name: Show current directory
+        run: pwd
+
+      - name: List files
+        run: ls -la
+      - name: Show current date and time
+        run: date
+      - name: Show current user
+        run: whoami
+      - name: Show current hostname
+        run: hostname
+      - name: Show disk usage 
+        run: df -h
